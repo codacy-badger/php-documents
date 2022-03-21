@@ -24,8 +24,6 @@ tools:
 
 build:
     dependencies:
-        before:
-            - "sudo composer self-update"
         override:
             - "composer install --no-interaction --prefer-dist"
     tests:
@@ -37,7 +35,7 @@ build:
                     format: 'php-clover'
     environment:
         php:
-            version: 7.0.8
+            version: 8
         mysql: false
         postgresql: false
         redis: false
